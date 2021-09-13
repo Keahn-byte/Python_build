@@ -1,0 +1,54 @@
+# Keahn Vasquez / CIS 284 -GUI Programming
+# 15/09/2021
+# This program will show a square with a rainbow circle in the center.
+
+import tkinter
+
+
+class MyGUI:
+    def __init__(self):
+        self.__canvas_width = 320
+        self.__canvas_height = 240
+        self.__X1 = 60
+        self.__Y1 = 20
+        self.__X2 = 260
+        self.__Y2 = 220
+        self.__PIE1_START = 0
+        self.__PIE1_WIDTH = 51.4285714
+        self.__PIE2_START = 51.4285714
+        self.__PIE2_WIDTH = 51.4285714
+        self.__PIE3_START = 102.857142
+        self.__PIE3_WIDTH = 51.4285714
+        self.__PIE4_START = 154.285713
+        self.__PIE4_WIDTH = 51.4285714
+        self.__PIE5_START = 205.714284
+        self.__PIE5_WIDTH = 51.4285714
+        self.__PIE6_START = 257.142855
+        self.__PIE6_WIDTH = 51.4285714
+        self.__PIE7_START = 308.571426
+        self.__PIE7_WIDTH = 51.4285714
+
+        self.main_window = tkinter.Tk()
+
+        self.canvas = tkinter.Canvas(self.main_window, width=self.__canvas_width, height=self.__canvas_height)
+
+        self.canvas.create_arc(self.__X1, self.__Y1, self.__X2, self.__Y2, start=self.__PIE1_START,
+                               extent=self.__PIE1_WIDTH, fill='violet')
+        self.canvas.create_arc(self.__X1, self.__Y1, self.__X2, self.__Y2, start=self.__PIE2_START,
+                               extent=self.__PIE2_WIDTH, fill='indigo')
+        self.canvas.create_arc(self.__X1, self.__Y1, self.__X2, self.__Y2, start=self.__PIE3_START,
+                               extent=self.__PIE3_WIDTH, fill='blue')
+        self.canvas.create_arc(self.__X1, self.__Y1, self.__X2, self.__Y2, start=self.__PIE4_START,
+                               extent=self.__PIE4_WIDTH, fill='green')
+        self.canvas.create_arc(self.__X1, self.__Y1, self.__X2, self.__Y2, start=self.__PIE5_START,
+                               extent=self.__PIE5_WIDTH, fill='yellow')
+        self.canvas.create_arc(self.__X1, self.__Y1, self.__X2, self.__Y2, start=self.__PIE6_START,
+                               extent=self.__PIE6_WIDTH, fill='orange')
+        self.canvas.create_arc(self.__X1, self.__Y1, self.__X2, self.__Y2, start=self.__PIE7_START,
+                               extent=self.__PIE7_WIDTH, fill='red')
+
+        self.canvas.pack()
+        tkinter.mainloop()
+
+if __name__ == '__main__':
+    my_gui = MyGUI()
